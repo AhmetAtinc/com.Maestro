@@ -93,6 +93,12 @@ public class US_02Stepdefinitions {
 
     @When("Kullanici Email address kutusuna gecersiz bir email adresi yazar")
     public void kullaniciEmailAddressKutusunaGecersizBirEmailAdresiYazar() {
+        loginPage.forgotPasswordPageEmailAddressTextBox.sendKeys(ConfigReader.getProperty("InvalidEmailAddress"));
+        loginPage.getPasswordResetPage.click();
+    }
+
+    @When("Kullanici Email address kutusuna eksik bir email adresi yazar")
+    public void kullaniciEmailAddressKutusunaEksikBirEmailAdresiYazar() {
         loginPage.forgotPasswordPageEmailAddressTextBox.sendKeys(ConfigReader.getProperty("InvalidEmailAddress@afterNonCharacter"));
         loginPage.getPasswordResetPage.click();
     }
@@ -133,4 +139,6 @@ public class US_02Stepdefinitions {
         loginPage.userIcon.click();
         loginPage.logoutButton.click();
     }
+
+
 }

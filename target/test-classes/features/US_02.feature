@@ -89,7 +89,7 @@ Feature: US_02 Login sayfasına ait tüm test caselerinin uygun ve kabul gormus 
 
   Given Kullanici Login URL'e gider
   And   Kullanici Forgot Password? sekmesine tiklar
-  When Kullanici Email address kutusuna gecersiz bir email adresi yazar
+  When Kullanici Email address kutusuna eksik bir email adresi yazar
   Then Email is invalid. uyari yazisinin goruntulendigi dogrulanir (Get password reset e-mail)
 
   Scenario: TC_12 Login sayfasindan register sayfasına gecilebilmelidir.
