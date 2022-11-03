@@ -1,5 +1,6 @@
-Feature: US_01 Register sayfasına ait tüm test caselerinin uygun ve kabul görmüş bir formatta oluşturulması ve test sonuçlarının yazılması beklenmektedir.
-@smoke
+@register
+Feature: US_01 Register sayfasına ait tüm test caselerinin uygun ve kabul gormus bir formatta olusturulmasi ve test sonuclarinin yazilmasi beklenmektedir.
+
   Scenario: TC_01 Yeni kayit olusturulabilmelidir.
 
     Given Kullanici Register URL'e gider
@@ -9,6 +10,7 @@ Feature: US_01 Register sayfasına ait tüm test caselerinin uygun ve kabul gör
     And   Kullanici Password kutusuna gecerli bir Password yazar
     Then  Kullanici Sign up butonuna tiklar
     Then  Yeni kayit ile giris yapildigi dogrulanir
+    Then  Kullanici cikis yapar
 
 
   Scenario: TC_02 Full Name kutusu bos birakilamaz

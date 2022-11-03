@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="11" time="30.53">
+<testcase classname="US_01 Register sayfasına ait tüm test caselerinin uygun ve kabul gormus bir formatta olusturulmasi ve test sonuclarinin yazilmasi beklenmektedir." name="TC_01 Yeni kayit olusturulabilmelidir." time="8.386">
+<system-out><![CDATA[Given Kullanici Register URL'e gider........................................passed
+And Kullanici Full Name kutusuna gecerli bir Full Name yazar................passed
+Then Kullanici Company Name kutusuna gecerli bir Company Name yazar.........passed
+And Kullanici Email address kutusuna gecerli bir Email yazar................passed
+And Kullanici Password kutusuna gecerli bir Password yazar..................passed
+Then Kullanici Sign up butonuna tiklar......................................passed
+Then Yeni kayit ile giris yapildigi dogrulanir..............................passed
+Then Kullanici cikis yapar..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US_01 Register sayfasına ait tüm test caselerinin uygun ve kabul gormus bir formatta olusturulmasi ve test sonuclarinin yazilmasi beklenmektedir." name="TC_02 Full Name kutusu bos birakilamaz" time="0.995">
+<system-out><![CDATA[Given Kullanici Register URL'e gider........................................passed
+And Kullanici Full Name kutusunu tiklar.....................................passed
+Then Kullanici Company Name kutusuna gecerli bir Company Name yazar.........passed
+And Kullanici Email address kutusuna gecerli bir Email yazar................passed
+And Kullanici Password kutusuna gecerli bir Password yazar..................passed
+Then Name surname is required. uyari yazisinin goruntulendigi dogrulanir....passed
+]]></system-out>
+</testcase>
+<testcase classname="US_01 Register sayfasına ait tüm test caselerinin uygun ve kabul gormus bir formatta olusturulmasi ve test sonuclarinin yazilmasi beklenmektedir." name="TC_03 Full Name kutusuna 3 karakterden az bilgi girilmemelidir" time="3.463">
+<system-out><![CDATA[Given Kullanici Register URL'e gider........................................passed
+And Kullanici Full Name kutusuna 2 karakter bilgi yazar.....................passed
+Then Kullanici Company Name kutusuna gecerli bir Company Name yazar.........passed
+And Kullanici Email address kutusuna gecerli bir Email yazar................passed
+When Kullanici Password kutusuna gecerli bir Password yazar.................passed
+And Kullanici Sign up butonuna tiklar.......................................passed
+Then Error User name surname min length 3. uyari yazisi goruldugu dogrulanir.passed
+]]></system-out>
+</testcase>
+<testcase classname="US_01 Register sayfasına ait tüm test caselerinin uygun ve kabul gormus bir formatta olusturulmasi ve test sonuclarinin yazilmasi beklenmektedir." name="TC_04 Company Name kutusu bos birakilamaz" time="1.006">
+<system-out><![CDATA[Given Kullanici Register URL'e gider........................................passed
+And Kullanici Full Name kutusuna gecerli bir Full Name yazar................passed
+Then Kullanici Company Name kutusuna tiklar.................................passed
+And Kullanici Email address kutusuna gecerli bir Email yazar................passed
+When Kullanici Password kutusuna gecerli bir Password yazar.................passed
+And Company name is required. uyari yazisinin goruntulendigi dogrulanir.....passed
+]]></system-out>
+</testcase>
+<testcase classname="US_01 Register sayfasına ait tüm test caselerinin uygun ve kabul gormus bir formatta olusturulmasi ve test sonuclarinin yazilmasi beklenmektedir." name="TC_05 Email address adresi kutusu bos birakilamaz" time="0.998">
+<system-out><![CDATA[Given Kullanici Register URL'e gider........................................passed
+And Kullanici Full Name kutusuna gecerli bir Full Name yazar................passed
+Then Kullanici Company Name kutusuna gecerli bir Company Name yazar.........passed
+And Kullanici Email address kutusunu tiklar.................................passed
+When Kullanici Password kutusuna gecerli bir Password yazar.................passed
+And Email is required. uyari yazisinin goruntulendigi dogrulanir............passed
+]]></system-out>
+</testcase>
+<testcase classname="US_01 Register sayfasına ait tüm test caselerinin uygun ve kabul gormus bir formatta olusturulmasi ve test sonuclarinin yazilmasi beklenmektedir." name="TC_06 Daha önceden alinmis bir email address ile kayit yapilmamalidir" time="3.179">
+<system-out><![CDATA[Given Kullanici Register URL'e gider........................................passed
+And Kullanici Full Name kutusuna gecerli bir Full Name yazar................passed
+Then Kullanici Company Name kutusuna gecerli bir Company Name yazar.........passed
+And Kullanici Email address kutusuna daha onceden alinmis bir Email yazar...passed
+When Kullanici Password kutusuna gecerli bir Password yazar.................passed
+And Kullanici Sign up butonuna tiklar.......................................passed
+Then Error Email already exists. yazisinin goruntulendigi dogrulanir........passed
+]]></system-out>
+</testcase>
+<testcase classname="US_01 Register sayfasına ait tüm test caselerinin uygun ve kabul gormus bir formatta olusturulmasi ve test sonuclarinin yazilmasi beklenmektedir." name="TC_07 Password  kutusu bos birakilamaz" time="1.282">
+<system-out><![CDATA[Given Kullanici Register URL'e gider........................................passed
+And Kullanici Full Name kutusuna gecerli bir Full Name yazar................passed
+Then Kullanici Company Name kutusuna gecerli bir Company Name yazar.........passed
+And Kullanici Email address kutusuna gecerli bir Email yazar................passed
+When Kullanici Password kutusuna tiklar.....................................passed
+Then Password is required. uyari yazisinin goruntulendigi dogrulanir........passed
+]]></system-out>
+</testcase>
+<testcase classname="US_01 Register sayfasına ait tüm test caselerinin uygun ve kabul gormus bir formatta olusturulmasi ve test sonuclarinin yazilmasi beklenmektedir." name="TC_08 Herhangi bir bilgi kutusu bos birakilirsa sign up butonu tiklanmamalidir." time="4.319">
+<system-out><![CDATA[Given Kullanici Register URL'e gider........................................passed
+And Kullanici Full Name kutusuna gecerli bir Full Name yazar................passed
+Then Kullanici Company Name kutusuna tiklar.................................passed
+And Kullanici Email address kutusuna gecerli bir Email yazar................passed
+When Kullanici Password kutusuna gecerli bir Password yazar.................passed
+Then Sign up butonu tiklanmamali............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US_01 Register sayfasına ait tüm test caselerinin uygun ve kabul gormus bir formatta olusturulmasi ve test sonuclarinin yazilmasi beklenmektedir." name="TC_09 Password kutusuna en az 6 en fazla 15 karakter yazilabilmelidir." time="4.549">
+<system-out><![CDATA[Given Kullanici Register URL'e gider........................................passed
+And Kullanici Full Name kutusuna gecerli bir Full Name yazar................passed
+Then Kullanici Company Name kutusuna gecerli bir Company Name yazar.........passed
+And Kullanici Email address kutusuna gecerli bir Email yazar................passed
+When Kullanici Password kutusuna 5 karakterli gecersiz sifre yazar..........passed
+And Password should be min. 6, max. 15 characters. uyari yazisinin goruntulendigi dogrulanir.passed
+And Kullanici Password kutusuna 16 karakterli gecersiz sifre yazamamalidir..passed
+Then 16 karakterli sifre yazilamadigi dogrulanir............................passed
+]]></system-out>
+</testcase>
+<testcase classname="US_01 Register sayfasına ait tüm test caselerinin uygun ve kabul gormus bir formatta olusturulmasi ve test sonuclarinin yazilmasi beklenmektedir." name="TC_10 Email address &quot;@&quot; icermelidir, &quot;@&quot; sembolunden once ve sonra bir karakter icermiyorsa &quot;Email is invalid.&quot; uyari yazisi goruntulenmelidir." time="1.174">
+<system-out><![CDATA[Given Kullanici Register URL'e gider........................................passed
+And Kullanici Full Name kutusuna gecerli bir Full Name yazar................passed
+Then Kullanici Company Name kutusuna gecerli bir Company Name yazar.........passed
+And Kullanici Email address kutusuna icerisinde @ bulunmayan adres yazar....passed
+When Email is invalid. uyari yazisinin goruntulendigi dogrulanir............passed
+And Kullanici Email address kutusuna icerisinde @ bulununan sonrasinda karakter bulunmayan adres yazar.passed
+Then Email is invalid. uyari yazisinin goruntulendigi dogrulanir............passed
+]]></system-out>
+</testcase>
+<testcase classname="US_01 Register sayfasına ait tüm test caselerinin uygun ve kabul gormus bir formatta olusturulmasi ve test sonuclarinin yazilmasi beklenmektedir." name="TC_11 Register sayfasindan oturum acma sayfasina gecilebilmelidir." time="0.879">
+<system-out><![CDATA[Given Kullanici Register URL'e gider........................................passed
+When Kullanici Return to Sign in butonuna tiklar............................passed
+Then Oturum acma sayfasinin goruntulendigi dogrulanir.......................passed
+]]></system-out>
+</testcase>
+</testsuite>

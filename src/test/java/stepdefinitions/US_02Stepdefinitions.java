@@ -127,4 +127,10 @@ public class US_02Stepdefinitions {
     public void theUserClosesThePage() {
         Driver.getDriver().quit();
     }
+
+    @Then("Kullanici cikis yapar")
+    public void kullaniciCikisYapar() {
+        loginPage.userIcon.click();
+        loginPage.logoutButton.click();
+    }
 }

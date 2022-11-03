@@ -8,12 +8,14 @@ import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import pages.US_01RegisterPage;
+import pages.US_02LoginPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
 public class US_01Stepdefinitions {
 
     US_01RegisterPage registerPage = new US_01RegisterPage();
+    US_02LoginPage loginPage=new US_02LoginPage();
 
     @Given("Kullanici Register URL'e gider")
     public void kullaniciURLEGider() {
@@ -109,6 +111,8 @@ public class US_01Stepdefinitions {
     @When("Kullanici Password kutusuna tiklar")
     public void kullaniciPasswordKutusunaTiklar() {
         registerPage.registerPasswordTextBox.click();
+        loginPage.createYourFreeAccountPage.click();
+
     }
 
     @Then("Password is required. uyari yazisinin goruntulendigi dogrulanir")
@@ -151,6 +155,7 @@ public class US_01Stepdefinitions {
     @And("Kullanici Email address kutusuna icerisinde @ bulunmayan adres yazar")
     public void kullaniciEmailAddressKutusunaIcerisindeBulunmayanAdresYazar() {
         registerPage.registerEmailAddressTextBox.sendKeys(ConfigReader.getProperty("InvalidEmailAddress@non"));
+        loginPage.createYourFreeAccountPage.click();
     }
 
 
@@ -162,6 +167,7 @@ public class US_01Stepdefinitions {
     @And("Kullanici Email address kutusuna icerisinde @ bulununan sonrasinda karakter bulunmayan adres yazar")
     public void kullaniciEmailAddressKutusunaIcerisindeBulununanSonrasindaKarakterBulunmayanAdresYazar() {
         registerPage.registerEmailAddressTextBox.sendKeys(ConfigReader.getProperty("InvalidEmailAddress@afterNonCharacter"));
+        loginPage.createYourFreeAccountPage.click();
     }
 
 

@@ -1,3 +1,4 @@
+@login
 Feature: US_02 Login sayfasına ait tüm test caselerinin uygun ve kabul gormus bir formatta olusturulmasi ve test sonuclarinin yazilmasi beklenmektedir.
 
   Scenario: TC_01 Kullanici gecerli bir email address ve gecerli bir password ile giris yapabilmelidir.
@@ -6,7 +7,8 @@ Feature: US_02 Login sayfasına ait tüm test caselerinin uygun ve kabul gormus 
   And    Kullanici Login Email address kutusuna gecerli bir Email yazar
   Then   Kullanici Login Password kutusuna gecerli bir Password yazar
   And    Kullanici Sign in butonuna tiklar
-  Then   Sayfaya giris yapildigi dogrulanir
+  When   Sayfaya giris yapildigi dogrulanir
+  Then   Kullanici cikis yapar
 
 
   Scenario: TC_02 Kullanici gecerli bir email address ve gecersiz bir password ile giris yapamamalidir.

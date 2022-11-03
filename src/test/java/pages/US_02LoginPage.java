@@ -46,4 +46,10 @@ public class US_02LoginPage {
    @FindBy (xpath = "//h3[text()='Create your free account']")
     public WebElement createYourFreeAccountPage;
 
+   @FindBy (xpath = "(//div[@class='profile-circle profile-circle-md'])[1]")
+    public WebElement userIcon;
+
+   @FindBy (xpath = "//i-feather[@name='log-out']")
+    public WebElement logoutButton;
+
 }
